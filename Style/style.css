@@ -1,0 +1,58 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* .nav-links{
+    position: relative;
+    bottom: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background: blue;
+    transition: all 0.5s;
+}
+
+.nav-links:hover::after,
+.nav-links::after:active{
+    width: 100%;
+} */
+
+.nav-links a {
+  position: relative;
+  bottom: 5;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-links a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0;
+  bottom: 0;
+  background: green;
+  height: 3px;
+  transition: all 0.5s;
+}
+
+/* .nav-links a:hover::after, */
+.nav-links.active a::after{
+    width: 100%;
+}
+
+
+.hero-img{
+    background: linear-gradient(to right, rgba(0,0,0,0.9),rgba(0,0,0,0.2)), url(../Assets/banner-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
