@@ -20,9 +20,9 @@ const itemDisplay = (id) => {
 
   id.slice(0, 3).forEach((item) => {
     const threeDiv = document.createElement("div");
-    threeDiv.innerHTML = `<div class="card bg-base-100 w-96  shadow-sm">
+    threeDiv.innerHTML = `<div class="card bg-base-100 w-96 shadow-sm mb-10">
   <figure class="bg-gray-400">
-    <img class=" h-70 object-fill"
+    <img class=" h-70 object-fill p-3"
       src="${item.image}"
       alt="Shoes" />
   </figure>
