@@ -21,7 +21,7 @@
     />
 
     <!-- style -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +34,6 @@
   </head>
   <body>
     <!-- navbar -->
-
     <header>
       <div class="navbar bg-base-100 shadow-sm lg:px-20">
         <div class="navbar-start">
@@ -85,7 +84,7 @@
       </div>
     </header>
 
-    <main>
+    <main ">
       <!-- hero -section -->
       <section class="hero-img h-96 flex items-center justify-center">
         <div class="w-11/12 mx-auto text-white space-y-5">
@@ -109,9 +108,9 @@
             </p>
           </div>
 
-          <section class="mt-15 flex justify-between items-center">
+          <section class="mt-15 md:flex  justify-between items-center gap-5">
             <!-- fast delivery -->
-            <div class="card w-70 relative bg-white p-5 space-y-5">
+            <div class="card max-w-70 relative bg-white p-5 space-y-5 sm: mb-10">
               <div
                 class="absolute -top-5 bg-gray-100 p-3 rounded-lg border-3 border-white shadow-md"
               >
@@ -130,7 +129,7 @@
             </div>
 
             <!-- 24/7 support -->
-            <div class="card w-70 relative bg-white p-5 space-y-5">
+            <div class="card max-w-70 relative bg-white p-5 space-y-5s m: mb-10">
               <div
                 class="absolute -top-5 bg-gray-100 p-3 rounded-lg border-3 border-white shadow-md"
               >
@@ -148,7 +147,7 @@
             </div>
 
             <!-- Secure payment -->
-            <div class="card w-70 relative bg-white p-5 space-y-5">
+            <div class="card max-w-70 relative bg-white p-5 space-y-5 sm: mb-10">
               <div
                 class="absolute -top-5 bg-gray-100 p-3 rounded-lg border-3 border-white shadow-md"
               >
@@ -163,7 +162,7 @@
             </div>
 
             <!-- Easy returns -->
-            <div class="card w-70 relative bg-white p-5 space-y-5">
+            <div class="card max-w-70 relative bg-white p-5 space-y-5 sm: mb-10">
               <div
                 class="absolute -top-5 bg-gray-100 p-3 rounded-lg border-3 border-white shadow-md"
               >
@@ -179,6 +178,16 @@
           </section>
         </div>
       </section>
+
+      <!-- trending products -->
+      <section class="w-11/12 mx-auto space-y-10">
+         <h1 class="text-4xl font-bold mt-10"> Trending Now</h1>
+
+         <div id="card-container" class="flex items-center justify-between gap-6">
+
+         </div>
+      </section>
+
     </main>
 
     <script src="script.js"></script>

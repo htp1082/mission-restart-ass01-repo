@@ -1,29 +1,6 @@
-* {
+*{
   font-family: "Open Sans", sans-serif;
 }
-
-/* .nav-links{
-    position: relative;
-    bottom: 5px;
-    color: black;
-    text-decoration: none;
-}
-
-.nav-links::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    background: blue;
-    transition: all 0.5s;
-}
-
-.nav-links:hover::after,
-.nav-links::after:active{
-    width: 100%;
-} */
 
 .nav-links a {
   position: relative;
