@@ -30,6 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+
     <title>SwiftCart | Ecommerce website</title>
   </head>
   <body>
@@ -60,7 +61,7 @@
             >
               <li><a>Home</a></li>
               <li>
-                <a href="">Products</a>
+                <a>Products</a>
               </li>
               <li><a>About</a></li>
               <li><a href="">Contact</a></li>
@@ -70,9 +71,9 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="flex items-center gap-5 px-1">
-            <li class="nav-links active"><a>Home</a></li>
+            <li class="nav-links active"><a href="#">Home</a></li>
             <li class="nav-links">
-              <a href="">Products</a>
+              <a href="products.html">Products</a>
             </li>
             <li class="nav-links"><a href="#">About</a></li>
             <li class="nav-links"><a href="#">Contact</a></li>
@@ -182,9 +183,8 @@
       <!-- trending products -->
       <section class="w-11/12 mx-auto space-y-10">
          <h1 class="text-4xl font-bold mt-10"> Trending Now</h1>
-
-         <div id="card-container" class="flex items-center justify-between gap-6">
-
+         <div id="card-container" class="flex items-center justify-between gap-6 card-container">
+          
          </div>
       </section>
 
@@ -192,7 +192,7 @@
 
       <footer class=" bg-gray-700 ">
 
-        <div class="flex justify-between border-b-2 border-white w-11/12 mx-auto p-10 text-white">
+        <div class="md:flex justify-between border-b-2 border-white w-11/12 mx-auto p-10 text-white">
 
           <nav class="space-y-2">
             <h2 class="text-2xl font-bold">SwiftCart</h2>
@@ -217,16 +217,16 @@
     <p>The latest news, article and resourses,</p><p>
       sent to your inbox only
     </p>
-    <div class="mt-5">
+    <div class="mt-5 ">
       <input class="bg-white rounded-sm text-black py-2 pl-2" type="email" placeholder="Enter your email">
-      <button class="btn btn-primary py-2 rounded-sm">Subscribe</button>
+      <button class="btn btn-primary py-2 rounded-sm mr-5">Subscribe</button>
     </div>
   </nav>
         </div>
 
-        <div class="w-11/12 mx-auto flex justify-between text-white py-10">
+        <div class="w-11/12 mx-auto text-center md:flex justify-between text-white py-10">
            <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © -SwiftCart. All right reserved</p>
   </aside>
 
   <div class="text-2xl">

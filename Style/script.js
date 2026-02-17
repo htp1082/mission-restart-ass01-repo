@@ -1,7 +1,7 @@
 const links = document.querySelectorAll(".nav-links");
 links.forEach((link) => {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     links.forEach((li) => li.classList.remove("active"));
     this.classList.add("active");
   });
@@ -20,7 +20,7 @@ const itemDisplay = (id) => {
 
   id.slice(0, 3).forEach((item) => {
     const threeDiv = document.createElement("div");
-    threeDiv.innerHTML = `<div class="card bg-base-100 w-96 shadow-sm mb-10">
+    threeDiv.innerHTML =`<div class="card bg-base-100 w-96 shadow-sm mb-10">
   <figure class="bg-gray-400">
     <img class=" h-70 object-fill p-3"
       src="${item.image}"
@@ -44,10 +44,79 @@ const itemDisplay = (id) => {
     </div>
   </div>
 </div>`;
- threeItemContainer.appendChild(threeDiv)
+ threeItemContainer.append(threeDiv)
   });
-
- 
 };
 
 threeItems();
+
+
+
+const catagoris =()=>{
+  const urlCatagori = 'https://fakestoreapi.com/products/categories'
+  fetch(urlCatagori)
+  .then((res)=> res.json())
+  .then((data)=> catagoriDisplay(data))
+}
+
+const catagoriDisplay=(id)=>{
+  const catagoriContainer = document.getElementById('catagori-container')
+  catagoriContainer.innerHTML=""
+
+  const allDiv = document.createElement('div')
+  allDiv.className="p-3 rounded-lg border-2"
+  allDiv.textContent= "All"
+  catagoriContainer.append(allDiv);
+
+  id.forEach(item => {
+    const singleCatagori = document.createElement('div')
+    singleCatagori.className="p-3 rounded-lg border-2"
+    singleCatagori.textContent=item
+    catagoriContainer.append(singleCatagori);
+  })
+}
+
+catagoris()
+
+const allItems = () => {
+  const itemUrl = "https://fakestoreapi.com/products";
+  fetch(itemUrl)
+    .then((res) => res.json())
+    .then((data) => allItemsDisplay(data));
+};
+
+const allItemsDisplay = (id) => {
+  const allproductContainer = document.getElementById("card-container2");
+  allproductContainer.innerHTML ="";
+
+  id.forEach((item) => {
+    const allProducts = document.createElement("div");
+    allProducts.innerHTML =`<div class="card bg-base-100 w-96 shadow-sm mb-10">
+  <figure class="bg-gray-400">
+    <img class=" h-70 object-fill p-3"
+      src="${item.image}"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <div class="flex justify-between">
+
+      <span class="p-1 rounded-md bg-blue-300">${item.category}</span>
+      <div class="flex items-center">
+   <i class="fa-solid fa-star mr-1" style="color: rgba(255, 212, 59, 1);"></i>
+   <span>${item.rating.rate}</span>
+   <p>(${item.rating.count})</p>
+      </div>
+         
+    </div>
+    <h2 class="card-title py-2 text-2xl">${item.title}</h2>
+    <div class="card-actions justify-between flex gap-3">
+      <button class="btn w-5/12"><i class="fa-solid fa-eye";"></i>Details</button>
+      <button class="btn w-5/12 btn-primary"><i class="fa-solid fa-cart-shopping" style="color: white"></i>Add</button>
+    </div>
+  </div>
+</div>`;
+ allproductContainer.append(allProducts)
+  });
+};
+
+allItems();
